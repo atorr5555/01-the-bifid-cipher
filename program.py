@@ -12,6 +12,8 @@ count = 0
 for line in fileinput.input():
 	if count == 0:
 		action = line
+		count += 1
+		continue
 	if count > 1:
 		break
 	phrase = line
@@ -48,6 +50,7 @@ def find_char(char):
 table = [ [ 'A' for i in range(5) ]  for i in range(5) ]
 fill_table()
 phrase = phrase.replace(' ', '')
+phrase = phrase.replace('\n', '')
 aux = []
 for char in phrase:
 	aux.append(find_char(char))
