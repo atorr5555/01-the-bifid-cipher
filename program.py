@@ -49,13 +49,12 @@ if __name__ == "__main__":
 	fill_table()
 	phrase = phrase.replace(' ', '')
 	phrase = phrase.replace('\n', '')
+	action = action.replace('\n', '')
 	
 	aux = []
 	for char in phrase:
 		aux.append(find_char(char))
-	
 	if action == 'ENCRYPT':
-
 		string_nums = ''
 		for x in aux:
 			string_nums += str(x[0])
